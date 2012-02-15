@@ -1,0 +1,73 @@
+$width: 960px;
+$fgcolor: white;
+$html_bgcolor: rgb(0,0,0); // #000;
+$body_bgcolor: rgb(20,20,20);
+
+// * { border: 1px solid red; }
+
+html {
+  background-color: $html_bgcolor;
+  color: $fgcolor;
+}
+
+body {
+  width: $width;
+  height: 100%;
+  margin: 10px auto 10px auto;
+  // background-color: $body_bgcolor;
+  font-family: 'Times New Roman', 'Times', sans-serif;
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: 'AkiLinesRegular';
+  src: url('fonts/akilinesregular-webfont.eot');
+  src: url('fonts/akilinesregular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/akilinesregular-webfont.woff') format('woff'),
+       url('fonts/akilinesregular-webfont.ttf') format('truetype'),
+       url('fonts/akilinesregular-webfont.svg#AkiLinesRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+h1 { font-size: 218%; }
+h2 { font-size: 164%; }
+h3 { font-size: 145%; }
+h4 { font-size: 118%; }
+h1,h2,h3,h4 {
+  display: inline-block;
+  font-weight: bold;
+}
+
+
+header {
+
+}
+
+nav {
+  margin: 5px 0px;
+  padding: 10px;
+  padding-left: 15px;
+  display: block;
+
+  font-family: "AkiLinesRegular", sans-serif;
+  font-size: 40px;
+
+  background-image: url('images/ctnav-960x80.jpg');
+//  background-size: 100%;
+//  background-repeat: no-repeat;
+
+  ul {
+    list-style-type: none;
+    li {
+      margin-right: 20px;
+      display: inline-block;
+    }
+  }
+}
+
+#main {
+  background-color: $body_bgcolor;
+  padding: 10px;
+}
