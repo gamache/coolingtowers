@@ -37,7 +37,8 @@ h3 { font-size: 145%; }
 h4 { font-size: 118%; }
 h1,h2,h3,h4 {
   display: inline-block;
-  font-weight: bold;
+  font-family: 'AkiLinesRegular';
+  margin: 10px 0px;
 }
 
 
@@ -70,4 +71,9 @@ nav {
 #main {
   background-color: $body_bgcolor;
   padding: 10px;
+
+  p { margin: 5px 0px; }
+
+
+
 }
