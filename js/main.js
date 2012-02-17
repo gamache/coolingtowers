@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
   // Initialize Advanced Galleriffic Gallery
   var gallery = $('#thumbs').galleriffic({
     delay:                     2500,
-    numThumbs:                 15,
+    numThumbs:                 50,
     preloadAhead:              10,
     enableTopPager:            true,
     enableBottomPager:         false,
@@ -25,8 +25,8 @@ jQuery(document).ready(function($) {
     controlsContainerSel:      '#controls',
     captionContainerSel:       '#caption',
     loadingContainerSel:       '#loading',
-    renderSSControls:          true,
-    renderNavControls:         true,
+    renderSSControls:          false,
+    renderNavControls:         false,
     playLinkText:              'Play Slideshow',
     pauseLinkText:             'Pause Slideshow',
     prevLinkText:              '&lsaquo; Previous Photo',
