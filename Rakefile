@@ -27,9 +27,13 @@ end
 task :thumbs do
   Dir.glob('pics/*.*').each do |image|
     thumb = image.gsub(/^pics/, 'pics/thumbs')
+    medium = image.gsub(/^pics/, 'pics/medium')
     unless File.exists?(thumb)
       sh "convert -define jpeg:size=150x150 '#{image}' -thumbnail 100x100^ "+
          "-gravity center -extent 100x100 '#{thumb}'"
+    end
+    unless File.exists?(medium)
+      sh "convert '#{image}' -resize 940x940 '#{medium}'"
     end
   end
 end
@@ -45,9 +49,10 @@ task :gallery => [:thumbs] do
   EOT
   Dir.glob('pics/*.*').each do |image|
     thumb = image.gsub(/^pics/, 'pics/thumbs')
+    medium = image.gsub(/^pics/, 'pics/medium')
     gallery_str += <<-EOT
     <li>
-      <a class="thumb" name="optionalCustomIdentifier" href="#{image}">
+      <a class="thumb" name="optionalCustomIdentifier" href="#{medium}">
         <img src="#{thumb}" />
       </a>
       <div class="caption"></div>

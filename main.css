@@ -52,3 +52,128 @@ nav {
   padding: 10px; }
   #main p {
     margin: 5px 0px; }
+
+#pics div.content {
+  /* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
+  display: none;
+  float: right;
+  width: 550px; }
+#pics a {
+  color: white; }
+#pics a, #pics a:active, #pics a:visited {
+  text-decoration: none; }
+#pics div.content a, #pics div.navigation a {
+  text-decoration: none;
+  color: #777; }
+#pics div.content a:focus, #pics div.content a:hover, #pics div.content a:active {
+  text-decoration: none; }
+#pics div.controls {
+  margin-top: 5px;
+  height: 23px; }
+#pics div.controls a {
+  padding: 5px; }
+#pics div.ss-controls {
+  float: left;
+  display: none; }
+#pics div.nav-controls {
+  float: right;
+  display: none; }
+#pics div.slideshow-container {
+  position: relative;
+  clear: both;
+  height: 502px;
+  /* This should be set to be at least the height of the largest image in the slideshow */
+  width: 960px;
+  overflow-x: hidden;
+  padding-bottom: 20px; }
+#pics div.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("loader.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 550px;
+  height: 502px;
+  /* This should be set to be at least the height of the largest image in the slideshow */ }
+#pics div.slideshow span.image-wrapper {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0; }
+#pics div.slideshow a.advance-link {
+  display: block;
+  width: 550px;
+  height: 502px;
+  /* This should be set to be at least the height of the largest image in the slideshow */
+  line-height: 502px;
+  /* This should be set to be at least the height of the largest image in the slideshow */
+  text-align: center; }
+#pics div.slideshow a.advance-link:hover, #pics div.slideshow a.advance-link:active, #pics div.slideshow a.advance-link:visited {
+  text-decoration: none; }
+#pics div.slideshow img {
+  vertical-align: middle; }
+#pics div.download {
+  float: right; }
+#pics div.caption-container {
+  position: relative;
+  clear: left;
+  height: 75px; }
+#pics span.image-caption {
+  display: block;
+  position: absolute;
+  width: 550px;
+  top: 0;
+  left: 0; }
+#pics div.caption {
+  padding: 12px; }
+#pics div.image-title {
+  font-weight: bold;
+  font-size: 1.4em; }
+#pics div.image-desc {
+  line-height: 1.3em;
+  padding-top: 12px; }
+#pics div.navigation {
+  /* The navigation style is set using jQuery so that the javascript specific styles won't be applied unless javascript is enabled. */ }
+#pics ul.thumbs {
+  clear: both;
+  margin: 0;
+  padding: 0; }
+#pics ul.thumbs li {
+  float: left;
+  padding: 0;
+  margin: 5px 10px 5px 0;
+  list-style: none; }
+#pics a.thumb {
+  padding: 2px;
+  display: block; }
+#pics ul.thumbs li.selected a.thumb {
+  background: #000; }
+#pics a.thumb:focus {
+  outline: none; }
+#pics ul.thumbs img {
+  border: none;
+  display: block; }
+#pics div.pagination {
+  clear: both; }
+#pics div.navigation div.top {
+  margin-bottom: 12px;
+  height: 11px; }
+#pics div.navigation div.bottom {
+  margin-top: 12px; }
+#pics div.pagination a, #pics div.pagination span.current, #pics div.pagination span.ellipsis {
+  display: block;
+  float: left;
+  margin-right: 2px;
+  padding: 4px 7px 2px 7px; }
+#pics div.pagination a:hover {
+  background-color: #eee;
+  text-decoration: none; }
+#pics div.pagination span.current {
+  font-weight: bold;
+  background-color: #000;
+  border-color: #000;
+  color: #fff; }
+#pics div.pagination span.ellipsis {
+  border: none;
+  padding: 5px 0 3px 2px; }
