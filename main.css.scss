@@ -36,7 +36,7 @@ h2 { font-size: 164%; }
 h3 { font-size: 145%; }
 h4 { font-size: 118%; }
 h1,h2,h3,h4 {
-  display: inline-block;
+  display: block;
   font-family: 'AkiLinesRegular';
   margin: 10px 0px;
 }
@@ -49,7 +49,7 @@ header {
 nav {
   margin: 5px 0px;
   padding: 0px;
-  padding-left: 15px;
+  padding-left: 10px;
   display: block;
 
   font-family: "AkiLinesRegular", sans-serif;
@@ -83,8 +83,15 @@ nav {
   .item {
     margin-bottom: 30px;
   }
-
 }
+
+#shows {
+  .show {
+    margin-bottom: 30px;
+  }
+}
+
+// lots of gallery paste
 #pics {
   div.content {
     /* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
