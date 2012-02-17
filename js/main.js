@@ -41,24 +41,22 @@ jQuery(document).ready(function($) {
     onPageTransitionOut: undefined,
     onPageTransitionIn: undefined
   });
+
+
+  // set up nav li click handlers
+  var handle_nav_li_click = function(e) {
+    var section = $(this).html();
+    $('nav li').removeClass('selected');
+    $(this).addClass('selected');
+    $('#main > div').hide();
+    $('#main > #' + section).show();
+  }
+  $('nav li').click(handle_nav_li_click);
+  $('nav li:first').click();
+
 });
 
 
-
-    /*
-    onSlideChange:             function(prevIndex, nextIndex) {
-      // 'this' refers to the gallery, which is an extension of $('#thumbs')
-      this.find('ul.thumbs').children()
-        .eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
-        .eq(nextIndex).fadeTo('fast', 1.0);
-    },
-    onPageTransitionOut:       function(callback) {
-      this.fadeTo('fast', 0.0, callback);
-    },
-    onPageTransitionIn:        function() {
-      this.fadeTo('fast', 1.0);
-    }
-    */
 
 
 

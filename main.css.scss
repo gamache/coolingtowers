@@ -48,7 +48,7 @@ header {
 
 nav {
   margin: 5px 0px;
-  padding: 10px;
+  padding: 0px;
   padding-left: 15px;
   display: block;
 
@@ -60,8 +60,14 @@ nav {
   ul {
     list-style-type: none;
     li {
-      margin-right: 20px;
+      padding: 10px;
+      margin-right: 10px;
       display: inline-block;
+      color: #ddd;
+    }
+    li.selected {
+      background-color: rgba(0,0,0,0.25);
+      color: white;
     }
   }
 }
@@ -73,6 +79,12 @@ nav {
   p { margin: 5px 0px; }
 }
 
+#news {
+  .item {
+    margin-bottom: 30px;
+  }
+
+}
 #pics {
   div.content {
     /* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
