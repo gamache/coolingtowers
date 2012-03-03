@@ -33,6 +33,17 @@ h1, h2, h3, h4 {
   font-family: 'AkiLinesRegular';
   margin: 10px 0px; }
 
+header {
+  background-image: url("images/ctbanner-960x110-notext.jpg");
+  width: 960px;
+  height: 110px; }
+  header h1.logo {
+    font-family: 'AkiLinesRegular';
+    font-size: 80px;
+    position: relative;
+    left: 10px;
+    top: 15px; }
+
 footer {
   text-align: center;
   font-size: 12px;

@@ -12,36 +12,6 @@ jQuery(document).ready(function($) {
   $('nav li:first').click();
 
 
-  // bandcamp API consumption - render each track listed in Cooling Towers'
-  // discography
-  $.ajax({
-    url: 'http://api.bandcamp.com/api/band/3/discography?key=ullrettkalladrhampa&band_id=2423741189',
-    dataType: 'jsonp',
-    success: function (data) {
-      for (var i in data['discography']) {
-        $.ajax({
-          url: 'http://api.bandcamp.com/api/track/3/info?key=ullrettkalladrhampa&track_id='+data['discography'][i].track_id,
-          dataType: 'jsonp',
-          success: function (track) {
-            $('#audio').append(
-              $('<div class="track"></div>').html(
-                '<img src="' + track['small_art_url'] + '">' +
-                '<h2>' + track['title'] + '</h2>' +
-                '<p class="credits">' + track['credits'] + '</p>' +
-                '<p><a target="_blank" href="' + track['streaming_url'] +
-                  '">Open in new window</a> or <a target="_blank" ' +
-                  'href="http://coolingtowers.bandcamp.com' + track['url'] +
-                  '">Listen on Bandcamp</a></p>'
-              )
-            );
-          }
-        });
-      }
-    }
-  });
-
-
-
   //// galleriffic stuff follows.
 
   // We only want these styles applied when javascript is enabled
@@ -86,6 +56,36 @@ jQuery(document).ready(function($) {
     onPageTransitionOut: undefined,
     onPageTransitionIn: undefined
   });
+  //// end of galleriffic stuff
+
+  // bandcamp API consumption - render each track listed in Cooling Towers'
+  // discography
+  $.ajax({
+    url: 'http://api.bandcamp.com/api/band/3/discography?key=ullrettkalladrhampa&band_id=2423741189',
+    dataType: 'jsonp',
+    success: function (data) {
+      for (var i in data['discography']) {
+        $.ajax({
+          url: 'http://api.bandcamp.com/api/track/3/info?key=ullrettkalladrhampa&track_id='+data['discography'][i].track_id,
+          dataType: 'jsonp',
+          success: function (track) {
+            $('#audio').append(
+              $('<div class="track"></div>').html(
+                '<img src="' + track['small_art_url'] + '">' +
+                '<h2>' + track['title'] + '</h2>' +
+                '<p class="credits">' + track['credits'] + '</p>' +
+                '<p><a target="_blank" href="' + track['streaming_url'] +
+                  '">Open in new window</a> or <a target="_blank" ' +
+                  'href="http://coolingtowers.bandcamp.com' + track['url'] +
+                  '">Listen on Bandcamp</a></p>'
+              )
+            );
+          }
+        });
+      }
+    }
+  });
+
 });
 
 

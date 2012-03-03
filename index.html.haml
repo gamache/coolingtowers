@@ -5,13 +5,10 @@
     %link(rel="stylesheet" type="text/css" href="reset.css")
     %link(href='http://fonts.googleapis.com/css?family=Allerta' rel='stylesheet' type='text/css')
     %link(rel="stylesheet" type="text/css" href="main.css")
-    %script(src="js/jquery-1.7.1.min.js")
-    %script(src="js/jquery.opacityrollover.js")
-    %script(src="js/jquery.galleriffic.js")
-    %script(src="js/main.js")
   %body
     %header
-      %img.banner(src="images/ctbanner-960x110.jpg")
+      %h1.logo Cooling Towers
+
     %nav
       %ul
         %li news
@@ -20,6 +17,7 @@
         %li audio
         %li pics
         %li contact
+
     #main
       #news
         .item
@@ -78,7 +76,7 @@
           %p With special guest GG Allin and the Murder Junkies
 
       #audio
-
+        <!-- populated by javascript -->
       #pics
         <!-- include gallery.html -->
 
@@ -88,11 +86,13 @@
         %p
           %a(target='_blank' href='http://coolingtowers.bandcamp.com') coolingtowers.bandcamp.com
 
-
-
       %br(clear='all')
 
     %footer
       copyright 2012 Cooling Towers.
 
+    %script(src="js/jquery-1.7.1.min.js")
+    %script(src="js/jquery.opacityrollover.js")
+    %script(src="js/jquery.galleriffic.js")
+    %script(src="js/main.js")
 

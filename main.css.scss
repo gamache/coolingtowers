@@ -14,7 +14,6 @@ body {
   width: $width;
   min-height: 100%;
   margin: 10px auto 10px auto;
-  // background-color: $body_bgcolor;
   font-family: 'Allerta', 'Geneva', 'Tahoma', sans-serif;
   font-size: 16px;
 }
@@ -43,7 +42,16 @@ h1,h2,h3,h4 {
 
 
 header {
-
+  background-image: url('images/ctbanner-960x110-notext.jpg');
+  width: 960px;
+  height: 110px;
+  h1.logo {
+    font-family: 'AkiLinesRegular';
+    font-size: 80px;
+    position: relative;
+    left: 10px;
+    top: 15px;
+  }
 }
 
 footer {
@@ -126,7 +134,7 @@ nav {
     /* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
     display: none;
     float: right;
-    width: 550px; 
+    width: 550px;
   }
 
   div.content a, div.navigation a {
