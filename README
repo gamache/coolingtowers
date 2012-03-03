@@ -1,0 +1,10 @@
+This is the site code for coolingtowers.us.
+
+HTML is generated from HAML, and CSS is generated from SCSS.  Additionally,
+there is a custom #include step implemented in the Rakefile.
+
+Run 'rake' to generate the site.
+
+ ,
+(k) copyright 2012  pete gamache  gamache!@$#@#$gmail.com
+    all rights reversed
