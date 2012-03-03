@@ -69,7 +69,7 @@ jQuery(document).ready(function($) {
           url: 'http://api.bandcamp.com/api/track/3/info?key=ullrettkalladrhampa&track_id='+data['discography'][i].track_id,
           dataType: 'jsonp',
           success: function (track) {
-            $('#audio').append(
+            $('#tracks').append(
               $('<div class="track"></div>').html(
                 '<img src="' + track['small_art_url'] + '">' +
                 '<h2>' + track['title'] + '</h2>' +
