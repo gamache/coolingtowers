@@ -1,4 +1,19 @@
 jQuery(document).ready(function($) {
+
+  // set up nav li click handlers
+  var handle_nav_li_click = function() {
+    var section = $(this).html();
+    $('nav li').removeClass('selected');
+    $(this).addClass('selected');
+    $('#main > div').hide();
+    $('#main > #' + section).show();
+  };
+  $('nav li').click(handle_nav_li_click);
+  $('nav li:first').click();
+
+
+  //// galleriffic stuff follows.
+
   // We only want these styles applied when javascript is enabled
   $('div.navigation').css({'width' : '300px', 'float' : 'left'});
   $('div.content').css('display', 'block');
@@ -41,19 +56,6 @@ jQuery(document).ready(function($) {
     onPageTransitionOut: undefined,
     onPageTransitionIn: undefined
   });
-
-
-  // set up nav li click handlers
-  var handle_nav_li_click = function(e) {
-    var section = $(this).html();
-    $('nav li').removeClass('selected');
-    $(this).addClass('selected');
-    $('#main > div').hide();
-    $('#main > #' + section).show();
-  }
-  $('nav li').click(handle_nav_li_click);
-  $('nav li:first').click();
-
 });
 
 
