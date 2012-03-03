@@ -85,6 +85,8 @@ nav {
   p { margin: 5px 0px; line-height: 1.4; }
   img[align=left]  { margin: 10px 10px 10px 0px; }
   img[align=right] { margin: 10px 0px 10px 10px; }
+  a { color: $fgcolor; }
+  //a,a:active,a:visited { text-decoration: none; }
 }
 
 #bio {
@@ -103,6 +105,21 @@ nav {
   }
 }
 
+#contact {
+  font-size: 24px;
+  a {text-decoration: underline;}
+}
+
+#audio {
+  h2 { margin-top: 0px; }
+  .track {
+    clear: both;
+    & > img {float: left; margin-right: 20px;}
+    padding: 10px 0px;
+  }
+}
+
+
 // lots of gallery paste
 #pics {
   div.content {
@@ -111,8 +128,6 @@ nav {
     float: right;
     width: 550px; 
   }
-  a { color: $fgcolor; }
-  a,a:active,a:visited { text-decoration: none; }
 
   div.content a, div.navigation a {
     text-decoration: none;

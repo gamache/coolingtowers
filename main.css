@@ -67,6 +67,8 @@ nav {
     margin: 10px 10px 10px 0px; }
   #main img[align=right] {
     margin: 10px 0px 10px 10px; }
+  #main a {
+    color: white; }
 
 #bio p {
   margin: 5px 0px 25px 0px; }
@@ -77,15 +79,25 @@ nav {
 #shows .show {
   margin-bottom: 30px; }
 
+#contact {
+  font-size: 24px; }
+  #contact a {
+    text-decoration: underline; }
+
+#audio h2 {
+  margin-top: 0px; }
+#audio .track {
+  clear: both;
+  padding: 10px 0px; }
+  #audio .track > img {
+    float: left;
+    margin-right: 20px; }
+
 #pics div.content {
   /* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
   display: none;
   float: right;
   width: 550px; }
-#pics a {
-  color: white; }
-#pics a, #pics a:active, #pics a:visited {
-  text-decoration: none; }
 #pics div.content a, #pics div.navigation a {
   text-decoration: none;
   color: #777; }
