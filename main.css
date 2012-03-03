@@ -6,8 +6,9 @@ body {
   width: 960px;
   height: 100%;
   margin: 10px auto 10px auto;
-  font-family: 'Times New Roman', 'Times', sans-serif;
-  font-size: 16px; }
+  font-family: 'Allerta', 'Geneva', 'Tahoma', sans-serif;
+  font-size: 16px;
+  line-height: 1.4; }
 
 @font-face {
   font-family: 'AkiLinesRegular';
@@ -57,6 +58,13 @@ nav {
   padding: 10px; }
   #main p {
     margin: 5px 0px; }
+  #main img[align=left] {
+    margin: 10px 10px 10px 0px; }
+  #main img[align=right] {
+    margin: 10px 0px 10px 10px; }
+
+#bio p {
+  margin: 5px 0px 25px 0px; }
 
 #news .item {
   margin-bottom: 30px; }

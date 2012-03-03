@@ -15,8 +15,9 @@ body {
   height: 100%;
   margin: 10px auto 10px auto;
   // background-color: $body_bgcolor;
-  font-family: 'Times New Roman', 'Times', sans-serif;
+  font-family: 'Allerta', 'Geneva', 'Tahoma', sans-serif;
   font-size: 16px;
+  line-height: 1.4;
 }
 
 @font-face {
@@ -77,6 +78,12 @@ nav {
   padding: 10px;
 
   p { margin: 5px 0px; }
+  img[align=left]  { margin: 10px 10px 10px 0px; }
+  img[align=right] { margin: 10px 0px 10px 10px; }
+}
+
+#bio {
+  p { margin: 5px 0px 25px 0px; }
 }
 
 #news {
