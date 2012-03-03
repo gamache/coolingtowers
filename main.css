@@ -4,11 +4,10 @@ html {
 
 body {
   width: 960px;
-  height: 100%;
+  min-height: 100%;
   margin: 10px auto 10px auto;
   font-family: 'Allerta', 'Geneva', 'Tahoma', sans-serif;
-  font-size: 16px;
-  line-height: 1.4; }
+  font-size: 16px; }
 
 @font-face {
   font-family: 'AkiLinesRegular';
@@ -34,6 +33,11 @@ h1, h2, h3, h4 {
   font-family: 'AkiLinesRegular';
   margin: 10px 0px; }
 
+footer {
+  text-align: center;
+  font-size: 12px;
+  margin: 10px 0px; }
+
 nav {
   margin: 5px 0px;
   padding: 0px;
@@ -57,7 +61,8 @@ nav {
   background-color: #141414;
   padding: 10px; }
   #main p {
-    margin: 5px 0px; }
+    margin: 5px 0px;
+    line-height: 1.4; }
   #main img[align=left] {
     margin: 10px 10px 10px 0px; }
   #main img[align=right] {
