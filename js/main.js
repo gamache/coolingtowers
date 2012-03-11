@@ -1,15 +1,52 @@
 jQuery(document).ready(function($) {
 
-  // set up nav li click handlers
-  var handle_nav_li_click = function() {
-    var section = $(this).html();
+  // Given a section name, this will highlight the nav li and show only
+  // that section
+  var show_section = function (section) {
     $('nav li').removeClass('selected');
-    $(this).addClass('selected');
+    $('nav li.' + section).addClass('selected');
     $('#main > div').hide();
     $('#main > #' + section).show();
+    document.title = 'Cooling Towers - ' + section.charAt(0).toUpperCase() +
+                     section.slice(1);
+  };
+
+  // This specifies the section to show on the front page.
+  var show_main_section = function () {
+    show_section('news');
+    return false;
+  };
+
+
+  // site navigation is implemented with popState and pushState
+  var handle_popstate = function(e) {
+    var section = e.state ? e.state['section'] : null;
+    if (section) {
+      // This is a popState event from hitting the Back button.  There will
+      // have been a valid state object; show the section listed there.
+      show_section(section);
+    }
+    else {
+      // This is a popState event from loading the page.  If the URL has
+      // an #id at the end of it, show that section; otherwise do nothing.
+      var h = document.location.href;
+      if (h.indexOf('#') != -1) {
+        section = h.slice(h.indexOf('#')+1);
+        show_section(section);
+        window.scrollTo(0,0);
+      }
+    }
+  };
+  window.onpopstate = handle_popstate;
+
+  // set up nav li click handlers to use pushState
+  var handle_nav_li_click = function() {
+    var section = this.className;
+    history.pushState({section: section}, '', '#'+section);
+    show_section(section);
   };
   $('nav li').click(handle_nav_li_click);
-  $('nav li:first').click();
+  show_main_section();
 
 
   //// galleriffic stuff follows.

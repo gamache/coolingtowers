@@ -8,16 +8,17 @@
     %link(rel="stylesheet" type="text/css" href="main.css")
   %body
     %header
-      %h1.logo Cooling Towers
+      %a.logo(href="#news")
+        %h1.logo Cooling Towers
 
     %nav
       %ul
-        %li news
-        %li bio
-        %li shows
-        %li audio
-        %li pics
-        %li contact
+        %li.news news
+        %li.bio bio
+        %li.shows shows
+        %li.audio audio
+        %li.pics pics
+        %li.contact contact
 
     #main
       #news
@@ -133,6 +134,7 @@
       copyright 2012 Cooling Towers.
 
     %script(src="js/jquery-1.7.1.min.js")
+    // %script(src='http://code.jquery.com/jquery-1.7.1.js')
     %script(src="js/jquery.opacityrollover.js")
     %script(src="js/jquery.galleriffic.js")
     %script(src="js/main.js")

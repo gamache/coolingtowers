@@ -43,6 +43,9 @@ header {
     position: relative;
     left: 10px;
     top: 15px; }
+  header a, header a:active, header a:visited {
+    text-decoration: none;
+    color: white; }
 
 footer {
   text-align: center;
