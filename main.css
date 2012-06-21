@@ -1,6 +1,6 @@
 html {
   background-color: black;
-  color: white; }
+  color: #dddddd; }
 
 body {
   width: 960px;
@@ -30,7 +30,8 @@ h4 {
 
 h1, h2, h3, h4 {
   display: block;
-  font-family: 'AkiLinesRegular';
+  font-family: 'Allerta', 'Geneva', 'Tahoma', sans-serif;
+  font-weight: bold;
   margin: 10px 0px; }
 
 header {
@@ -39,13 +40,14 @@ header {
   height: 110px; }
   header h1.logo {
     font-family: 'AkiLinesRegular';
+    font-weight: normal;
     font-size: 80px;
     position: relative;
     left: 10px;
     top: 15px; }
   header a, header a:active, header a:visited {
     text-decoration: none;
-    color: white; }
+    color: #dddddd; }
 
 footer {
   text-align: center;
@@ -83,7 +85,7 @@ nav {
   #main img[align=right] {
     margin: 10px 0px 10px 10px; }
   #main a {
-    color: white; }
+    color: #dddddd; }
 
 #bio p {
   margin: 5px 0px 25px 0px; }

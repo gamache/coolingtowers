@@ -1,5 +1,5 @@
 $width: 960px;
-$fgcolor: white;
+$fgcolor: #ddd;
 $html_bgcolor: rgb(0,0,0); // #000;
 $body_bgcolor: rgb(20,20,20);
 
@@ -36,7 +36,9 @@ h3 { font-size: 145%; }
 h4 { font-size: 118%; }
 h1,h2,h3,h4 {
   display: block;
-  font-family: 'AkiLinesRegular';
+  //font-family: 'AkiLinesRegular';
+  font-family: 'Allerta', 'Geneva', 'Tahoma', sans-serif;
+  font-weight: bold;
   margin: 10px 0px;
 }
 
@@ -47,6 +49,7 @@ header {
   height: 110px;
   h1.logo {
     font-family: 'AkiLinesRegular';
+    font-weight: normal;
     font-size: 80px;
     position: relative;
     left: 10px;
@@ -129,7 +132,8 @@ nav {
 }
 
 
-// lots of gallery paste
+
+// lots of gallery paste below here.
 #pics {
   div.content {
     /* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
