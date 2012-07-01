@@ -1,10 +1,9 @@
 This is the site code for coolingtowers.us.
 
-HTML is generated from HAML, and CSS is generated from SCSS.  Additionally,
-there is a custom #include step implemented in the Rakefile.
+Run 'rake' to generate the site. The Rakefile converts Haml to HTML, 
+Sass to CSS, generates the image gallery, and implements an include feature.
 
-Run 'rake' to generate the site.
+ImageMagick (convert) is required to generate the image thumbnails.
 
- ,
-(k) copyright 2012  pete gamache  gamache!@$#@#$gmail.com
-    all rights reversed
+ ,   copyright 2012 pete gamache, pete@gamache.org
+(k)  all rights reversed
