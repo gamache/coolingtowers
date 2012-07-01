@@ -1,6 +1,6 @@
 This is the site code for coolingtowers.us.
 
-Run 'rake' to generate the site. The Rakefile converts Haml to HTML, 
+Run 'rake' to generate the site. The Rakefile converts Haml to HTML and
 Sass to CSS, generates the image gallery, and implements an include feature.
 
 ImageMagick (convert) is required to generate the image thumbnails.
