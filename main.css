@@ -1,6 +1,11 @@
+/*
+$fgcolor: #000; //#ddd;
+$html_bgcolor: #fff; //rgb(0,0,0); // #000;
+$body_bgcolor: #fff; //rgb(20,20,20);
+*/
 html {
   background-color: black;
-  color: #dddddd; }
+  color: black; }
 
 body {
   width: 960px;
@@ -39,6 +44,7 @@ header {
   width: 960px;
   height: 110px; }
   header h1.logo {
+    color: #f8f8f8;
     font-family: 'AkiLinesRegular';
     font-weight: normal;
     font-size: 80px;
@@ -47,7 +53,7 @@ header {
     top: 15px; }
   header a, header a:active, header a:visited {
     text-decoration: none;
-    color: #dddddd; }
+    color: black; }
 
 footer {
   text-align: center;
@@ -74,7 +80,8 @@ nav {
       color: white; }
 
 #main {
-  background-color: #141414;
+  position: relative;
+  background-color: #f8f8f8;
   padding: 10px;
   padding-bottom: 20px; }
   #main p {
@@ -85,13 +92,18 @@ nav {
   #main img[align=right] {
     margin: 10px 0px 10px 10px; }
   #main a {
-    color: #dddddd; }
+    color: black; }
 
 #bio p {
   margin: 5px 0px 25px 0px; }
 
 #news .item {
   margin-bottom: 30px; }
+#news #content {
+  width: 600px; }
+#news #sidebar {
+  width: 320px;
+  float: right; }
 
 #shows .show {
   margin-bottom: 30px; }
