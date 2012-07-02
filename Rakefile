@@ -1,3 +1,5 @@
+CONVERT = ENV['CONVERT'] || 'convert'  ## path to ImageMagick 'convert' command
+
 task :all => [:html, :css, :thumbs]
 task :default => [:all]
 
@@ -29,11 +31,11 @@ task :thumbs do
     thumb = image.gsub(/^pics/, 'pics/thumbs')
     medium = image.gsub(/^pics/, 'pics/medium')
     unless File.exists?(thumb)
-      sh "convert -define jpeg:size=150x150 '#{image}' -thumbnail 100x100^ "+
+      sh "#{CONVERT} -define jpeg:size=150x150 '#{image}' -thumbnail 100x100^ "+
          "-gravity center -extent 100x100 '#{thumb}'"
     end
     unless File.exists?(medium)
-      sh "convert '#{image}' -resize 940x940 '#{medium}'"
+      sh "#{CONVERT} '#{image}' -resize 940x940 '#{medium}'"
     end
   end
 end
