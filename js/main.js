@@ -1,3 +1,5 @@
+window.scrollTo(0,0);
+
 jQuery(document).ready(function($) {
 
   // Given a section name, this will highlight the nav li and show only
@@ -21,6 +23,35 @@ jQuery(document).ready(function($) {
     return false;
   };
 
+  var render_bandcamp = function () {
+    // bandcamp API consumption - render each track listed in Cooling Towers'
+    // discography
+    $.ajax({
+      url: 'http://api.bandcamp.com/api/band/3/discography?key=ullrettkalladrhampa&band_id=2423741189',
+      dataType: 'jsonp',
+      success: function (data) {
+        for (var i in data['discography']) {
+          $.ajax({
+            url: 'http://api.bandcamp.com/api/track/3/info?key=ullrettkalladrhampa&track_id='+data['discography'][i].track_id,
+            dataType: 'jsonp',
+            success: function (track) {
+              $('#tracks').append(
+                $('<div class="track"></div>').html(
+                  '<img src="' + track['small_art_url'] + '">' +
+                  '<h2>' + track['title'] + '</h2>' +
+                  '<p class="credits">' + track['credits'] + '</p>' +
+                  '<p><a target="_blank" href="' + track['streaming_url'] +
+                    '">Open in new window</a> or <a target="_blank" ' +
+                    'href="http://coolingtowers.bandcamp.com' + track['url'] +
+                    '">Listen on Bandcamp</a></p>'
+                )
+              );
+            }
+          });
+        }
+      }
+    });
+  };
 
   // site navigation is implemented with popState and pushState
   var handle_popstate = function(e) {
@@ -38,8 +69,11 @@ jQuery(document).ready(function($) {
         section = h.slice(h.indexOf('#')+1);
         if (section == '') section = 'news';
         show_section(section);
-        window.scrollTo(0,0);
+      } else {
+        show_main_section();
       }
+      window.scrollTo(0,0);
+      render_bandcamp();
     }
   };
   window.onpopstate = handle_popstate;
@@ -51,7 +85,7 @@ jQuery(document).ready(function($) {
     show_section(section);
   };
   $('nav li').click(handle_nav_li_click);
-  show_main_section();
+  //show_main_section();
 
 
   //// galleriffic stuff follows.
@@ -100,33 +134,6 @@ jQuery(document).ready(function($) {
   });
   //// end of galleriffic stuff
 
-  // bandcamp API consumption - render each track listed in Cooling Towers'
-  // discography
-  $.ajax({
-    url: 'http://api.bandcamp.com/api/band/3/discography?key=ullrettkalladrhampa&band_id=2423741189',
-    dataType: 'jsonp',
-    success: function (data) {
-      for (var i in data['discography']) {
-        $.ajax({
-          url: 'http://api.bandcamp.com/api/track/3/info?key=ullrettkalladrhampa&track_id='+data['discography'][i].track_id,
-          dataType: 'jsonp',
-          success: function (track) {
-            $('#tracks').append(
-              $('<div class="track"></div>').html(
-                '<img src="' + track['small_art_url'] + '">' +
-                '<h2>' + track['title'] + '</h2>' +
-                '<p class="credits">' + track['credits'] + '</p>' +
-                '<p><a target="_blank" href="' + track['streaming_url'] +
-                  '">Open in new window</a> or <a target="_blank" ' +
-                  'href="http://coolingtowers.bandcamp.com' + track['url'] +
-                  '">Listen on Bandcamp</a></p>'
-              )
-            );
-          }
-        });
-      }
-    }
-  });
 
 });
 
