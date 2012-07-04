@@ -30,12 +30,14 @@ jQuery(document).ready(function($) {
       url: 'http://api.bandcamp.com/api/band/3/discography?key=ullrettkalladrhampa&band_id=2423741189',
       dataType: 'jsonp',
       success: function (data) {
+        var $tracks = $('#tracks');
+        $tracks.html('');
         for (var i in data['discography']) {
           $.ajax({
             url: 'http://api.bandcamp.com/api/track/3/info?key=ullrettkalladrhampa&track_id='+data['discography'][i].track_id,
             dataType: 'jsonp',
             success: function (track) {
-              $('#tracks').append(
+              $tracks.append(
                 $('<div class="track"></div>').html(
                   '<img src="' + track['small_art_url'] + '">' +
                   '<h2>' + track['title'] + '</h2>' +
@@ -55,7 +57,7 @@ jQuery(document).ready(function($) {
 
   // site navigation is implemented with popState and pushState
   var handle_popstate = function(e) {
-    var section = e.state ? e.state['section'] : null;
+    var section = (e && e.state) ? e.state['section'] : null;
     if (section) {
       // This is a popState event from hitting the Back button.  There will
       // have been a valid state object; show the section listed there.
@@ -85,8 +87,7 @@ jQuery(document).ready(function($) {
     show_section(section);
   };
   $('nav li').click(handle_nav_li_click);
-  //show_main_section();
-
+  handle_popstate();
 
   //// galleriffic stuff follows.
 
