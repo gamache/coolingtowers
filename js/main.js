@@ -32,6 +32,7 @@ jQuery(document).ready(function($) {
       var h = document.location.href;
       if (h.indexOf('#') != -1) {
         section = h.slice(h.indexOf('#')+1);
+        if (section == '') section = 'news';
         show_section(section);
         window.scrollTo(0,0);
       }
