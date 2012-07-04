@@ -41,7 +41,7 @@ jQuery(document).ready(function($) {
 
   // set up nav li click handlers to use pushState
   var handle_nav_li_click = function() {
-    var section = this.className;
+    var section = this.innerHTML;
     history.pushState({section: section}, '', '#'+section);
     show_section(section);
   };
