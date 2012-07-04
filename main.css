@@ -1,8 +1,3 @@
-/*
-$fgcolor: #000; //#ddd;
-$html_bgcolor: #fff; //rgb(0,0,0); // #000;
-$body_bgcolor: #fff; //rgb(20,20,20);
-*/
 html {
   background-color: black;
   color: black; }
@@ -44,7 +39,7 @@ header {
   width: 960px;
   height: 110px; }
   header h1.logo {
-    color: #f8f8f8;
+    color: white;
     font-family: 'AkiLinesRegular';
     font-weight: normal;
     font-size: 80px;
@@ -58,7 +53,8 @@ header {
 footer {
   text-align: center;
   font-size: 12px;
-  margin: 10px 0px; }
+  margin: 10px 0px;
+  clear: both; }
 
 nav {
   margin: 5px 0px;
@@ -74,7 +70,7 @@ nav {
       padding: 10px;
       margin-right: 10px;
       display: inline-block;
-      color: #ddd; }
+      color: #dddddd; }
     nav ul li.selected {
       background-color: rgba(0, 0, 0, 0.25);
       color: white; }
@@ -99,11 +95,16 @@ nav {
 
 #news .item {
   margin-bottom: 30px; }
+#news .clear {
+  width: 100%;
+  clear: both; }
 #news #content {
   width: 600px; }
 #news #sidebar {
   width: 320px;
   float: right; }
+  #news #sidebar p {
+    padding-bottom: 5px; }
 
 #shows .show {
   margin-bottom: 30px; }
