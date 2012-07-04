@@ -7,8 +7,12 @@ jQuery(document).ready(function($) {
     $('nav li.' + section).addClass('selected');
     $('#main > div').hide();
     $('#main > #' + section).show();
-    document.title = 'Cooling Towers - ' + section.charAt(0).toUpperCase() +
-                     section.slice(1);
+    if (section == '' || section == 'news') {
+      document.title = 'Cooling Towers';
+    } else {
+      document.title = 'Cooling Towers - ' + section.charAt(0).toUpperCase() +
+                       section.slice(1);
+    }
   };
 
   // This specifies the section to show on the front page.
