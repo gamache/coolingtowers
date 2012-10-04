@@ -58,77 +58,6 @@
 
 
         #content
-          .item
-            %h2 Lord Classic, Cooling Towers, and more in Brattleboro, VT on 7/14
-            %p.date 2012-06-21
-            %p
-              Hey Vermont! Brooklyn and Boston are ganging up on you for an afternoon
-              show at the Stone Church in Brattleboro on Saturday, July 14.
-              Beatings commence at 3pm.
-              (<a href='images/flyers/20120714-brattleboro.jpg' target='_blank'>flyer</a>)
-
-          .item
-            %h2 Cooling Towers, Milling Gowns, Eksi Ekso, Pressure System at Cantab, 6/29
-            %p.date 2012-06-20
-            %p
-              Friday, June 29 at the Cantab Lounge downstairs in Central Sq,
-              Cambridge, MA. Milling Gowns are on first and we're on second,
-              so come early!
-              (<a href='https://www.facebook.com/events/365309943532537/' target='_blank'>facebook event</a>)
-
-          .item
-            %h2 CT w/ Age Rings (EP Release) at Radio, 5/26
-            %p.date 2012-05-08
-            %p
-              %a(href='http://www.midriffrecords.com/' target='_blank') Midriff Records
-              presents the Age Rings' "AM/PM" EP release show, with
-              Cooling Towers, Eldridge Rodriguez, and Sarah Borges +
-              Greg Lyon.  DJ sets by Celebrity Handjob.
-              (<a href='https://www.facebook.com/events/160873064039260/' target='_blank'>facebook event</a>)
-
-          .item
-            %h2 Playing the Rock 'N' Roll Rumble Night 1, Sunday, April 1
-            %p.date 2012-03-24
-            %p
-              Cooling Towers is excited to play in the
-              %a(href='http://rockandrollrumble.com' target='_blank') Rumble
-              this year!  We headline night 1, Sunday April 1, at TT's.
-
-          .item
-            %h2 Tonight! CT w/ Black Fortress of Opium
-            %p.date 2012-03-03
-            %p
-              Tonight at the Magic Room in Allston, Black Fortress of Opium plays
-              a record release show for their new full-length "Stratospherical"!
-              Backup handily provided by Cooling Towers, Brian Carpenter + the
-              Confessions, DJ Damian Gregory, and our own DJ Commodore Vic.
-
-          .item
-            %h2 Booked with Plushgun on 3/17
-            %p.date 2012-02-22
-            %p
-              Awesome! Picked up a gig with the fabulous
-              %a(href='http://plushgun.com' target='_blank') Plushgun
-              in mid-March.  We'll be playing the Middle East Upstairs. Get psyched!
-
-          .item
-            %h2 Last-minute Show at Radio
-            %p.date 2012-02-02
-            %p
-              Ultra-last-minute! Cooling Towers is pinch-hitting for Camden tomorrow
-              night, Friday 2/3 at Radio in Somerville, with Black Helicopter and
-              13 Billion Years.  We're happy to see some new faces.
-              But old ones, come on down!
-
-          .item
-            %h2 Brooklyn and Brooklyn
-            %p.date 2012-02-01
-            %p
-              Cooling Towers is hitting Brooklyn twice this month! 2/4 at The Gutter
-              with Lord Classic, and 2/17 at Spike Hill with Missing Ships.
-
-        .clear
-
 
       #bio
         %a(href='images/press/201202-coolingtowers-2400x1350.jpg' target='_blank')
@@ -252,10 +181,15 @@
       copyright 2012 Cooling Towers.
 
     %script(src="js/jquery-1.7.1.min.js")
+    %script(src="js/tumblr-feedeater.js")
     %script(src="js/jquery.opacityrollover.js")
     %script(src="js/jquery.galleriffic.js")
     %script(src="js/main.js")
+    %script(src="http://coolingtowersmusic.tumblr.com/api/read/json")
     :javascript
+      var f=new FEEDEATER();
+      f.render({target: 'content'});
+
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-29987286-1']);
       _gaq.push(['_setDomainName', 'coolingtowers.us']);

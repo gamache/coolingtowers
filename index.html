@@ -60,86 +60,7 @@
             <iframe width="320" height="180" src="http://www.youtube-nocookie.com/embed/Stq_W-RCUrw" frameborder="0" allowfullscreen></iframe>
           </p>
         </div>
-        <div id='content'>
-          <div class='item'>
-            <h2>Lord Classic, Cooling Towers, and more in Brattleboro, VT on 7/14</h2>
-            <p class='date'>2012-06-21</p>
-            <p>
-              Hey Vermont! Brooklyn and Boston are ganging up on you for an afternoon
-              show at the Stone Church in Brattleboro on Saturday, July 14.
-              Beatings commence at 3pm.
-              (<a href='images/flyers/20120714-brattleboro.jpg' target='_blank'>flyer</a>)
-            </p>
-          </div>
-          <div class='item'>
-            <h2>Cooling Towers, Milling Gowns, Eksi Ekso, Pressure System at Cantab, 6/29</h2>
-            <p class='date'>2012-06-20</p>
-            <p>
-              Friday, June 29 at the Cantab Lounge downstairs in Central Sq,
-              Cambridge, MA. Milling Gowns are on first and we're on second,
-              so come early!
-              (<a href='https://www.facebook.com/events/365309943532537/' target='_blank'>facebook event</a>)
-            </p>
-          </div>
-          <div class='item'>
-            <h2>CT w/ Age Rings (EP Release) at Radio, 5/26</h2>
-            <p class='date'>2012-05-08</p>
-            <p>
-              <a href='http://www.midriffrecords.com/' target='_blank'>Midriff Records</a>
-              presents the Age Rings' "AM/PM" EP release show, with
-              Cooling Towers, Eldridge Rodriguez, and Sarah Borges +
-              Greg Lyon.  DJ sets by Celebrity Handjob.
-              (<a href='https://www.facebook.com/events/160873064039260/' target='_blank'>facebook event</a>)
-            </p>
-          </div>
-          <div class='item'>
-            <h2>Playing the Rock 'N' Roll Rumble Night 1, Sunday, April 1</h2>
-            <p class='date'>2012-03-24</p>
-            <p>
-              Cooling Towers is excited to play in the
-              <a href='http://rockandrollrumble.com' target='_blank'>Rumble</a>
-              this year!  We headline night 1, Sunday April 1, at TT's.
-            </p>
-          </div>
-          <div class='item'>
-            <h2>Tonight! CT w/ Black Fortress of Opium</h2>
-            <p class='date'>2012-03-03</p>
-            <p>
-              Tonight at the Magic Room in Allston, Black Fortress of Opium plays
-              a record release show for their new full-length "Stratospherical"!
-              Backup handily provided by Cooling Towers, Brian Carpenter + the
-              Confessions, DJ Damian Gregory, and our own DJ Commodore Vic.
-            </p>
-          </div>
-          <div class='item'>
-            <h2>Booked with Plushgun on 3/17</h2>
-            <p class='date'>2012-02-22</p>
-            <p>
-              Awesome! Picked up a gig with the fabulous
-              <a href='http://plushgun.com' target='_blank'>Plushgun</a>
-              in mid-March.  We'll be playing the Middle East Upstairs. Get psyched!
-            </p>
-          </div>
-          <div class='item'>
-            <h2>Last-minute Show at Radio</h2>
-            <p class='date'>2012-02-02</p>
-            <p>
-              Ultra-last-minute! Cooling Towers is pinch-hitting for Camden tomorrow
-              night, Friday 2/3 at Radio in Somerville, with Black Helicopter and
-              13 Billion Years.  We're happy to see some new faces.
-              But old ones, come on down!
-            </p>
-          </div>
-          <div class='item'>
-            <h2>Brooklyn and Brooklyn</h2>
-            <p class='date'>2012-02-01</p>
-            <p>
-              Cooling Towers is hitting Brooklyn twice this month! 2/4 at The Gutter
-              with Lord Classic, and 2/17 at Spike Hill with Missing Ships.
-            </p>
-          </div>
-        </div>
-        <div class='clear'></div>
+        <div id='content'></div>
       </div>
       <div id='bio'>
         <a href='images/press/201202-coolingtowers-2400x1350.jpg' target='_blank'>
@@ -414,11 +335,16 @@
       copyright 2012 Cooling Towers.
     </footer>
     <script src='js/jquery-1.7.1.min.js'></script>
+    <script src='js/tumblr-feedeater.js'></script>
     <script src='js/jquery.opacityrollover.js'></script>
     <script src='js/jquery.galleriffic.js'></script>
     <script src='js/main.js'></script>
+    <script src='http://coolingtowersmusic.tumblr.com/api/read/json'></script>
     <script type='text/javascript'>
       //<![CDATA[
+        var f=new FEEDEATER();
+        f.render({target: 'content'});
+        
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-29987286-1']);
         _gaq.push(['_setDomainName', 'coolingtowers.us']);
