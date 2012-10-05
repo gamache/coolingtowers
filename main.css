@@ -109,6 +109,8 @@ nav {
   float: right; }
   #news #sidebar p {
     padding-bottom: 5px; }
+  #news #sidebar #mailchimp-email {
+    width: 230px; }
 
 #shows .show {
   margin-bottom: 30px; }
