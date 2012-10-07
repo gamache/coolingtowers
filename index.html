@@ -70,9 +70,9 @@
             <iframe width="320" height="180" src="http://www.youtube-nocookie.com/embed/Stq_W-RCUrw" frameborder="0" allowfullscreen></iframe>
           </p>
         </div>
-        <div id='content'></div>
+        <div class='hidden' id='content'></div>
       </div>
-      <div id='bio'>
+      <div class='hidden' id='bio'>
         <a href='images/press/201202-coolingtowers-2400x1350.jpg' target='_blank'>
           <img align='left' src='images/press/201202-coolingtowers-400x225.jpg' />
         </a>
@@ -103,7 +103,7 @@
         </p>
         <img src='images/ctlooksright-940x188.jpg' />
       </div>
-      <div id='shows'>
+      <div class='hidden' id='shows'>
         <div class='show'>
           <h2>
             Cantab Lounge (Cambridge, MA)
@@ -177,11 +177,11 @@
           </p>
         </div>
       </div>
-      <div id='audio'>
+      <div class='hidden' id='audio'>
         <div id='tracks'><!-- populated by javascript --></div>
         <img src='images/ctlooksmostlyright-940x188.jpg' />
       </div>
-      <div id='pics'>
+      <div class='hidden' id='pics'>
 <div id="controls"></div>
 <div id="loading"></div>
 <div id="slideshow"></div>
@@ -317,7 +317,7 @@
   </ul>
 </div>
       </div>
-      <div id='contact'>
+      <div class='hidden' id='contact'>
         <p>
           <a href='mailto:contact@coolingtowers.us' target='_blank'>contact@coolingtowers.us</a>
         </p>
@@ -352,8 +352,13 @@
     <script src='http://coolingtowersmusic.tumblr.com/api/read/json'></script>
     <script type='text/javascript'>
       //<![CDATA[
-        var f=new FEEDEATER();
-        f.render({target: 'content'});
+        (function(){
+          var f=new FEEDEATER(),
+              c=$('#content');
+          c.hide();
+          f.render({target: c});
+          c.fadeIn(400);
+        })();
         
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-29987286-1']);

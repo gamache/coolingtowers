@@ -68,9 +68,9 @@
             <iframe width="320" height="180" src="http://www.youtube-nocookie.com/embed/Stq_W-RCUrw" frameborder="0" allowfullscreen></iframe>
 
 
-        #content
+        #content.hidden
 
-      #bio
+      #bio.hidden
         %a(href='images/press/201202-coolingtowers-2400x1350.jpg' target='_blank')
           %img(src='images/press/201202-coolingtowers-400x225.jpg' align='left')
         %p
@@ -97,7 +97,7 @@
 
         %img(src='images/ctlooksright-940x188.jpg')
 
-      #shows
+      #shows.hidden
         .show
           %h2
             Cantab Lounge (Cambridge, MA)
@@ -162,14 +162,14 @@
             %a(href="https://www.facebook.com/events/158530350913633/" target='_blank') (facebook)
 
 
-      #audio
+      #audio.hidden
         #tracks <!-- populated by javascript -->
         %img(src='images/ctlooksmostlyright-940x188.jpg')
 
-      #pics
+      #pics.hidden
         <!-- include gallery.html -->
 
-      #contact
+      #contact.hidden
         %p
           %a(target="_blank" href="mailto:contact@coolingtowers.us") contact@coolingtowers.us
         %p
@@ -198,8 +198,13 @@
     %script(src="js/main.js")
     %script(src="http://coolingtowersmusic.tumblr.com/api/read/json")
     :javascript
-      var f=new FEEDEATER();
-      f.render({target: 'content'});
+      (function(){
+        var f=new FEEDEATER(),
+            c=$('#content');
+        c.hide();
+        f.render({target: c});
+        c.fadeIn(400);
+      })();
 
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-29987286-1']);

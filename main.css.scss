@@ -21,6 +21,7 @@ $logo_color: #fff;
 
 // * { border: 1px solid red; }
 
+.hidden { display: none; }
 
 html {
   background-color: $html_bgcolor;
@@ -128,8 +129,10 @@ nav {
 }
 
 #news {
-  .item {
-    margin-bottom: 30px;
+  .item,
+  .tumblr-post {
+    margin-top: 30px;
+    &:first-child { margin-top: 0px; }
   }
 
   .clear {

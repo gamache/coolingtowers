@@ -1,3 +1,6 @@
+.hidden {
+  display: none; }
+
 html {
   background-color: black;
   color: black;
@@ -97,8 +100,12 @@ nav {
 #bio p {
   margin: 5px 0px 25px 0px; }
 
-#news .item {
-  margin-bottom: 30px; }
+#news .item,
+#news .tumblr-post {
+  margin-top: 30px; }
+  #news .item:first-child,
+  #news .tumblr-post:first-child {
+    margin-top: 0px; }
 #news .clear {
   width: 100%;
   clear: both; }

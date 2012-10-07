@@ -88,6 +88,7 @@ jQuery(document).ready(function($) {
   };
   $('nav li').click(handle_nav_li_click);
   handle_popstate();
+  $('.hidden').removeClass('hidden');
 
   //// galleriffic stuff follows.
 
