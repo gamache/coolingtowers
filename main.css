@@ -72,11 +72,13 @@ h1, h2, h3, h4 {
   margin: 10px 0px; }
 
 header {
+  background-image: url("images/ctbanner-960x110-notext.jpg");
+  height: 110px;
   width: 960px; }
   header h1.logo {
     display: block;
     margin: 10px;
-    color: black;
+    color: white;
     font-family: 'AkiLinesRegular';
     font-weight: normal;
     font-size: 105px; }
@@ -96,17 +98,21 @@ nav {
   padding-left: 10px;
   display: block;
   font-family: "Century Schoolbook", "Georgia", "Palatino", serif;
-  font-size: 24px; }
+  font-weight: normal;
+  font-size: 24px;
+  background-image: url("images/ctnav-960x60.jpg"); }
   nav ul {
     list-style-type: none; }
     nav ul li {
+      height: 30px;
+      vertical-align: middle;
       padding: 5px;
       margin-right: 10px;
       display: inline-block;
-      color: #444444; }
+      color: #dddddd; }
     nav ul li.selected {
-      background-color: rgba(0, 0, 0, 0.15);
-      color: black; }
+      background-color: rgba(0, 0, 0, 0.45);
+      color: white; }
 
 #main {
   position: relative;
@@ -166,6 +172,15 @@ nav {
   #audio .track > img {
     float: left;
     margin-right: 20px; }
+
+#pics #slideshow {
+  margin-bottom: 20px; }
+  #pics #slideshow img {
+    display: block;
+    margin: 0 auto 0 auto;
+    max-height: 600px;
+    max-width: 600px;
+    object-fit: contain; }
 
 #pics div.content {
   /* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */

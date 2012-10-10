@@ -7,9 +7,9 @@ $content-width: 550px;
 $fgcolor: #000;
 $html_bgcolor: #f8f8f8;
 $body_bgcolor: #f8f8f8;
-$nav_color: #444;
-$nav_selected_color: #000;
-$logo_color: $fgcolor;
+$nav_color: #ddd;
+$nav_selected_color: #fff;
+$logo_color: #fff;
 $font: "Century Schoolbook", "Georgia", "Palatino", serif;
 
 
@@ -59,6 +59,8 @@ h1,h2,h3,h4 {
 
 
 header {
+  background-image: url('images/ctbanner-960x110-notext.jpg');
+  height: 110px;
   width: $width;
   h1.logo {
     display: block;
@@ -85,18 +87,24 @@ nav {
   display: block;
 
   font-family: $font;
+  font-weight: normal;
   font-size: 24px;
+
+  background-image: url('images/ctnav-960x60.jpg');
+  // height: 40px;
 
   ul {
     list-style-type: none;
     li {
+      height: 30px;
+      vertical-align: middle;
       padding: 5px;
       margin-right: 10px;
       display: inline-block;
       color: $nav_color;
     }
     li.selected {
-      background-color: rgba(0,0,0,0.15);
+      background-color: rgba(0,0,0,0.45);
       color: $nav_selected_color;
     }
   }
@@ -170,6 +178,18 @@ nav {
 }
 
 
+#pics {
+  #slideshow {
+    img {
+      display: block;
+      margin: 0 auto 0 auto;
+      max-height: 600px;
+      max-width: 600px;
+      object-fit: contain;
+    }
+    margin-bottom: 20px;
+  }
+}
 
 // lots of gallery paste below here.
 #pics {
