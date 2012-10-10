@@ -1,8 +1,38 @@
+/* css reset from http://meyerweb.com/eric/tools/css/reset/v2.0 | 20110126 License:none(publicdomain)*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/*HTML5display-roleresetforolderbrowsers*/
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 .hidden {
   display: none; }
 
 html {
-  background-color: black;
+  background-color: #f8f8f8;
   color: black;
   margin: 0;
   padding: 0; }
@@ -13,7 +43,7 @@ body {
   min-height: 100%;
   margin: 0 auto;
   padding: 0;
-  font-family: 'Allerta', 'Geneva', 'Tahoma', sans-serif;
+  font-family: "Century Schoolbook", "Georgia", "Palatino", serif;
   font-size: 16px; }
 
 @font-face {
@@ -37,23 +67,19 @@ h4 {
 
 h1, h2, h3, h4 {
   display: block;
-  font-family: 'Allerta', 'Geneva', 'Tahoma', sans-serif;
+  font-family: "Century Schoolbook", "Georgia", "Palatino", serif;
   font-weight: bold;
   margin: 10px 0px; }
 
 header {
-  background-image: url("images/ctbanner-960x110-notext.jpg");
-  width: 960px;
-  height: 110px; }
+  width: 960px; }
   header h1.logo {
-    color: white;
+    display: block;
+    margin: 10px;
+    color: black;
     font-family: 'AkiLinesRegular';
     font-weight: normal;
-    font-size: 80px;
-    position: relative;
-    left: 10px;
-    top: 15px;
-    margin: 0; }
+    font-size: 105px; }
   header a, header a:active, header a:visited {
     text-decoration: none;
     color: black; }
@@ -65,23 +91,22 @@ footer {
   clear: both; }
 
 nav {
-  margin: 5px 0px;
+  margin: 5px 0px 15px 0px;
   padding: 0px;
   padding-left: 10px;
   display: block;
-  font-family: "AkiLinesRegular", sans-serif;
-  font-size: 40px;
-  background-image: url("images/ctnav-960x60.jpg"); }
+  font-family: "Century Schoolbook", "Georgia", "Palatino", serif;
+  font-size: 24px; }
   nav ul {
     list-style-type: none; }
     nav ul li {
-      padding: 10px;
+      padding: 5px;
       margin-right: 10px;
       display: inline-block;
-      color: #dddddd; }
+      color: #444444; }
     nav ul li.selected {
-      background-color: rgba(0, 0, 0, 0.25);
-      color: white; }
+      background-color: rgba(0, 0, 0, 0.15);
+      color: black; }
 
 #main {
   position: relative;
@@ -106,11 +131,15 @@ nav {
   #news .item:first-child,
   #news .tumblr-post:first-child {
     margin-top: 0px; }
+  #news .item img,
+  #news .tumblr-post img {
+    display: block;
+    margin: 0 auto 0 auto; }
 #news .clear {
   width: 100%;
   clear: both; }
 #news #content {
-  width: 600px; }
+  width: 550px; }
 #news #sidebar {
   width: 320px;
   float: right; }
