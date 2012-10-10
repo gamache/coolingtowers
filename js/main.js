@@ -88,6 +88,11 @@ $(function() {
     show_section(section);
   };
   $('nav li').click(handle_nav_li_click);
+
+  // avoid reloading everything when logo is clicked
+  $('a.logo').click(function(){ $('nav li.news').click(); return false; });
+
+  // initialize the page
   handle_popstate();
   $('.hidden').removeClass('hidden');
 
