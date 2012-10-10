@@ -1,6 +1,6 @@
 window.scrollTo(0,0);
 
-jQuery(document).ready(function($) {
+$(function() {
 
   // Given a section name, this will highlight the nav li and show only
   // that section
@@ -82,8 +82,9 @@ jQuery(document).ready(function($) {
 
   // set up nav li click handlers to use pushState
   var handle_nav_li_click = function() {
-    var section = this.innerHTML;
-    history.pushState({section: section}, '', '#'+section);
+    var section = this.innerHTML,
+        url = section=='news' ? window.location.pathname : '#'+section;
+    history.pushState({section: section}, '', url);
     show_section(section);
   };
   $('nav li').click(handle_nav_li_click);
