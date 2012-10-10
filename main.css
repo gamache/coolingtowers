@@ -144,7 +144,9 @@ nav {
   width: 320px;
   float: right; }
   #news #sidebar p {
-    padding-bottom: 5px; }
+    margin-top: 15px; }
+    #news #sidebar p:first-child {
+      margin-top: 0px; }
   #news #sidebar #mailchimp-email {
     width: 230px; }
 

@@ -140,7 +140,8 @@ nav {
     width: 320px;
     float: right;
     p {
-      padding-bottom: 5px;
+      margin-top: 15px;
+      &:first-child { margin-top: 0px; }
     }
     #mailchimp-email {
       width: 230px;
