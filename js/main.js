@@ -1,4 +1,4 @@
-window.scrollTo(0,0);
+//window.scrollTo(0,0);
 
 $(function() {
 
@@ -7,8 +7,13 @@ $(function() {
   var show_section = function (section) {
     $('nav li').removeClass('selected');
     $('nav li.' + section).addClass('selected');
+
     $('#main > div').hide();
+    $('.section-specific').hide();
+
     $('#main > #' + section).show();
+    $('.show-with-' + section).show();
+
     if (section == '' || section == 'news') {
       document.title = 'Cooling Towers';
     } else {
@@ -94,7 +99,7 @@ $(function() {
 
   // initialize the page
   handle_popstate();
-  $('.hidden').removeClass('hidden');
+  $('.js-hidden').removeClass('js-hidden');
 
   //// galleriffic stuff follows.
 

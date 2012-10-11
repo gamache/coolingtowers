@@ -4,6 +4,20 @@
   <head>
     <title>Cooling Towers</title>
     <link href='main.css' rel='stylesheet' type='text/css' />
+    <script type='text/javascript'>
+      //<![CDATA[
+        // progressive enhancement, bitches.  hide .js-hidden when JS is working.
+        (function(){
+          var sheet = document.styleSheets[0];
+          if (sheet.addRule) { // IE
+            sheet.addRule('.js-hidden', 'visibility:hidden;display:none;', 0);
+          } else if (sheet.insertRule) {
+            // everyone else
+            sheet.insertRule('.js-hidden{visibility:hidden;display:none;}', 0);
+          }
+        })();
+      //]]>
+    </script>
   </head>
   <body>
     <header>
@@ -67,10 +81,12 @@
       </p>
     </div>
     <div id='main'>
-      <div class='hidden' id='news'>
-        <div id='content'></div>
+      <div class='js-hidden' id='news'>
+        <div id='tumblr'>
+          <noscript>News is unavailable without JavaScript.  Buy a better phone.</noscript>
+        </div>
       </div>
-      <div class='hidden' id='bio'>
+      <div class='js-hidden' id='bio'>
         <a href='images/press/201202-coolingtowers-2400x1350.jpg' target='_blank'>
           <img align='center' alt='Cooling Towers in Niner Bravo' class='bandpic' src='images/press/201202-coolingtowers-400x225.jpg' />
         </a>
@@ -114,14 +130,18 @@
           sound is an amalgamation of indie rock, anthemic British pop and the
           angular aggression of 80's post punk.
         </p>
-        <p>
+        <p class='hidden'>
           As word-of-mouth has spread,
           Cooling Towers have gone from local unknowns to well-received
           headliners within a matter of months. The band are currently finishing
           up a collection of tracks with producer Darron Burke of Make Shift
           Studio, set to be released this spring.
         </p>
-        <!-- / %img(src='images/ctlooksright-940x188.jpg') -->
+        <p>
+          Cooling Towers recorded an album with producer Darron Burke of
+          Make Shift Studios, currently being mastered and set to be released
+          early 2013.
+        </p>
       </div>
       <div class='hidden' id='shows'>
         <div class='show'>
@@ -197,11 +217,10 @@
           </p>
         </div>
       </div>
-      <div class='hidden' id='audio'>
+      <div class='js-hidden' id='audio'>
         <div id='tracks'><!-- populated by javascript --></div>
-        <!-- / %img(src='images/ctlooksmostlyright-940x188.jpg') -->
       </div>
-      <div class='hidden' id='pics'>
+      <div class='js-hidden' id='pics'>
 <div id="controls"></div>
 <div id="loading"></div>
 <div id="slideshow"></div>
@@ -337,7 +356,7 @@
   </ul>
 </div>
       </div>
-      <div class='hidden' id='contact'>
+      <div class='js-hidden' id='contact'>
         <p>
           <a href='mailto:contact@coolingtowers.us' target='_blank'>contact@coolingtowers.us</a>
         </p>
@@ -351,18 +370,20 @@
           <a href='http://www.reverbnation.com/coolingtowers' target='_blank'>reverbnation.com/coolingtowers</a>
         </p>
         <br />
-        <!-- /%img(src='images/press/201202-fiveheads-940x188.jpg' usemap="#fiveheadsmap") -->
+        <img src='images/ct-fiveheads-550x110.jpg' usemap='#fiveheadsmap' />
         <map name='fiveheadsmap'>
-          <area coords='0,0,188,188' href='mailto:ronan@coolingtowers.us' shape='rect' />
-          <area coords='188,0,376,188' href='mailto:judy@coolingtowers.us' shape='rect' />
-          <area coords='376,0,564,188' href='mailto:adam@coolingtowers.us' shape='rect' />
-          <area coords='564,0,752,188' href='mailto:eric@coolingtowers.us' shape='rect' />
-          <area coords='752,0,940,188' href='mailto:pete@coolingtowers.us' shape='rect' />
+          <area coords='0,0,110,110' href='mailto:ronan@coolingtowers.us' shape='rect' />
+          <area coords='110,0,220,110' href='mailto:judy@coolingtowers.us' shape='rect' />
+          <area coords='220,0,330,110' href='mailto:adam@coolingtowers.us' shape='rect' />
+          <area coords='330,0,440,110' href='mailto:eric@coolingtowers.us' shape='rect' />
+          <area coords='440,0,550,110' href='mailto:pete@coolingtowers.us' shape='rect' />
         </map>
       </div>
     </div>
     <footer>
-      copyright 2012 Cooling Towers.
+      <div class='hidden section-specific show-with-bio'></div>
+      <div class='hidden section-specific show-with-audio'></div>
+      <p>copyright 2012 Cooling Towers.</p>
     </footer>
     <script src='js/jquery-1.7.1.min.js'></script>
     <script src='js/tumblr-feedeater.js'></script>
@@ -374,7 +395,7 @@
       //<![CDATA[
         (function(){
           var f=new FEEDEATER(),
-              c=$('#content');
+              c=$('#tumblr');
           c.hide();
           f.render({target: c});
           c.fadeIn(400);

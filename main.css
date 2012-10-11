@@ -91,6 +91,16 @@ footer {
   font-size: 12px;
   padding: 10px 0px;
   clear: both; }
+  footer .show-with-bio {
+    width: 960px;
+    height: 320px;
+    margin: 10px 0px;
+    background-image: url("images/ct-looksright-960x320.jpg"); }
+  footer .show-with-audio {
+    width: 960px;
+    height: 320px;
+    margin: 10px 0px;
+    background-image: url("images/ct-looksmostlyright-960x320.jpg"); }
 
 nav {
   margin: 5px 0px 25px 0px;
@@ -104,10 +114,10 @@ nav {
   nav ul {
     list-style-type: none; }
     nav ul li {
-      height: 30px;
+      height: 28px;
       vertical-align: middle;
       padding: 5px;
-      margin-right: 10px;
+      margin-right: 30px;
       display: inline-block;
       color: #dddddd; }
     nav ul li.selected {
@@ -118,7 +128,7 @@ nav {
   width: 320px;
   float: right; }
   #sidebar p {
-    margin-top: 15px; }
+    margin-top: 20px; }
     #sidebar p:first-child {
       margin-top: 0px; }
   #sidebar #mailchimp-email {
@@ -155,19 +165,13 @@ nav {
       display: inline;
       font-style: italic; }
 
-#news .item,
 #news .tumblr-post {
   margin-top: 30px; }
-  #news .item:first-child,
   #news .tumblr-post:first-child {
     margin-top: 0px; }
-  #news .item img,
   #news .tumblr-post img {
     display: block;
     margin: 0 auto 0 auto; }
-#news .clear {
-  width: 100%;
-  clear: both; }
 
 #shows .show {
   margin-bottom: 30px; }

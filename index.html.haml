@@ -4,6 +4,17 @@
   %head
     %title Cooling Towers
     %link(rel="stylesheet" type="text/css" href="main.css")
+    :javascript
+      // progressive enhancement, bitches.  hide .js-hidden when JS is working.
+      (function(){
+        var sheet = document.styleSheets[0];
+        if (sheet.addRule) { // IE
+          sheet.addRule('.js-hidden', 'visibility:hidden;display:none;', 0);
+        } else if (sheet.insertRule) {
+          // everyone else
+          sheet.insertRule('.js-hidden{visibility:hidden;display:none;}', 0);
+        }
+      })();
 
   %body
     %header
@@ -64,10 +75,11 @@
         <iframe width="320" height="180" src="http://www.youtube-nocookie.com/embed/Stq_W-RCUrw" frameborder="0" allowfullscreen></iframe>
 
     #main
-      #news.hidden
+      #news.js-hidden
         #tumblr
+          %noscript News is unavailable without JavaScript.  Buy a better phone.
 
-      #bio.hidden
+      #bio.js-hidden
         %a(href='images/press/201202-coolingtowers-2400x1350.jpg' target='_blank')
           %img.bandpic(src='images/press/201202-coolingtowers-400x225.jpg' align='center' alt='Cooling Towers in Niner Bravo')
         #lineup
@@ -178,13 +190,13 @@
             %a(href="https://www.facebook.com/events/158530350913633/" target='_blank') (facebook)
 
 
-      #audio.hidden
+      #audio.js-hidden
         #tracks <!-- populated by javascript -->
 
-      #pics.hidden
+      #pics.js-hidden
         <!-- include gallery.html -->
 
-      #contact.hidden
+      #contact.js-hidden
         %p
           %a(target="_blank" href="mailto:contact@coolingtowers.us") contact@coolingtowers.us
         %p
@@ -194,17 +206,18 @@
         %p
           %a(target='_blank' href='http://www.reverbnation.com/coolingtowers') reverbnation.com/coolingtowers
         %br
-        //%img(src='images/press/201202-fiveheads-940x188.jpg' usemap="#fiveheadsmap")
+        %img(src='images/ct-fiveheads-550x110.jpg' usemap="#fiveheadsmap")
         %map(name='fiveheadsmap')
-          %area(shape="rect" coords='0,0,188,188' href='mailto:ronan@coolingtowers.us')
-          %area(shape="rect" coords='188,0,376,188' href='mailto:judy@coolingtowers.us')
-          %area(shape="rect" coords='376,0,564,188' href='mailto:adam@coolingtowers.us')
-          %area(shape="rect" coords='564,0,752,188' href='mailto:eric@coolingtowers.us')
-          %area(shape="rect" coords='752,0,940,188' href='mailto:pete@coolingtowers.us')
-
+          %area(shape="rect" coords='0,0,110,110' href='mailto:ronan@coolingtowers.us')
+          %area(shape="rect" coords='110,0,220,110' href='mailto:judy@coolingtowers.us')
+          %area(shape="rect" coords='220,0,330,110' href='mailto:adam@coolingtowers.us')
+          %area(shape="rect" coords='330,0,440,110' href='mailto:eric@coolingtowers.us')
+          %area(shape="rect" coords='440,0,550,110' href='mailto:pete@coolingtowers.us')
 
     %footer
-      copyright 2012 Cooling Towers.
+      .hidden.section-specific.show-with-bio
+      .hidden.section-specific.show-with-audio
+      %p copyright 2012 Cooling Towers.
 
     %script(src="js/jquery-1.7.1.min.js")
     %script(src="js/tumblr-feedeater.js")

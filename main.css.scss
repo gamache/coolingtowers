@@ -77,6 +77,19 @@ footer {
   font-size: 12px;
   padding: 10px 0px;
   clear: both;
+
+  .show-with-bio {
+    width: 960px;
+    height: 320px;
+    margin: 10px 0px;
+    background-image: url('images/ct-looksright-960x320.jpg');
+  }
+  .show-with-audio {
+    width: 960px;
+    height: 320px;
+    margin: 10px 0px;
+    background-image: url('images/ct-looksmostlyright-960x320.jpg');
+  }
 }
 
 nav {
@@ -90,15 +103,14 @@ nav {
   font-size: 24px;
 
   background-image: url('images/ctnav-960x60.jpg');
-  // height: 40px;
 
   ul {
     list-style-type: none;
     li {
-      height: 30px;
+      height: 28px;
       vertical-align: middle;
       padding: 5px;
-      margin-right: 10px;
+      margin-right: 30px;
       display: inline-block;
       color: $nav_color;
     }
@@ -113,7 +125,7 @@ nav {
   width: 320px;
   float: right;
   p {
-    margin-top: 15px;
+    margin-top: 20px;
     &:first-child { margin-top: 0px; }
   }
   #mailchimp-email {
@@ -155,7 +167,6 @@ nav {
 }
 
 #news {
-  .item,
   .tumblr-post {
     margin-top: 30px;
     &:first-child { margin-top: 0px; }
@@ -163,11 +174,6 @@ nav {
       display: block;
       margin: 0 auto 0 auto;
     }
-  }
-
-  .clear {
-    width: 100%;
-    clear: both;
   }
 }
 
@@ -190,7 +196,6 @@ nav {
   }
 }
 
-
 #pics {
   #slideshow {
     img {
@@ -204,7 +209,8 @@ nav {
   }
 }
 
-// lots of gallery paste below here.
+
+//// lots of gallery mostly-paste below here.
 #pics {
   div.content {
     /* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
