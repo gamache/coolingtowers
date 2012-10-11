@@ -114,10 +114,20 @@ nav {
       background-color: rgba(0, 0, 0, 0.45);
       color: white; }
 
+#sidebar {
+  width: 320px;
+  float: right; }
+  #sidebar p {
+    margin-top: 15px; }
+    #sidebar p:first-child {
+      margin-top: 0px; }
+  #sidebar #mailchimp-email {
+    width: 230px; }
+
 #main {
+  width: 570px;
   position: relative;
-  padding: 10px;
-  padding-bottom: 20px; }
+  padding: 10px 0px 20px 0px; }
   #main p {
     margin: 5px 0px;
     line-height: 1.4; }
@@ -130,6 +140,20 @@ nav {
 
 #bio p {
   margin: 5px 0px 25px 0px; }
+#bio img.bandpic {
+  display: block;
+  margin: 10px auto; }
+#bio #lineup {
+  text-align: center;
+  margin-bottom: 30px; }
+  #bio #lineup .member {
+    display: block;
+    margin: 10px 0px; }
+    #bio #lineup .member .name {
+      display: inline; }
+    #bio #lineup .member .role {
+      display: inline;
+      font-style: italic; }
 
 #news .item,
 #news .tumblr-post {
@@ -144,17 +168,6 @@ nav {
 #news .clear {
   width: 100%;
   clear: both; }
-#news #content {
-  width: 550px; }
-#news #sidebar {
-  width: 320px;
-  float: right; }
-  #news #sidebar p {
-    margin-top: 15px; }
-    #news #sidebar p:first-child {
-      margin-top: 0px; }
-  #news #sidebar #mailchimp-email {
-    width: 230px; }
 
 #shows .show {
   margin-bottom: 30px; }
@@ -167,7 +180,6 @@ nav {
 #audio h2 {
   margin-top: 0px; }
 #audio .track {
-  clear: both;
   padding: 10px 0px; }
   #audio .track > img {
     float: left;
@@ -205,10 +217,9 @@ nav {
   display: none; }
 #pics div.slideshow-container {
   position: relative;
-  clear: both;
   height: 502px;
   /* This should be set to be at least the height of the largest image in the slideshow */
-  width: 960px;
+  width: 570px;
   overflow-x: hidden;
   padding-bottom: 20px; }
 #pics div.loader {
@@ -228,10 +239,10 @@ nav {
   left: 0; }
 #pics div.slideshow a.advance-link {
   display: block;
-  width: 550px;
-  height: 502px;
+  width: 570px;
+  height: 570px;
   /* This should be set to be at least the height of the largest image in the slideshow */
-  line-height: 502px;
+  line-height: 570px;
   /* This should be set to be at least the height of the largest image in the slideshow */
   text-align: center; }
 #pics div.slideshow a.advance-link:hover, #pics div.slideshow a.advance-link:active, #pics div.slideshow a.advance-link:visited {
@@ -261,7 +272,6 @@ nav {
 #pics div.navigation {
   /* The navigation style is set using jQuery so that the javascript specific styles won't be applied unless javascript is enabled. */ }
 #pics ul.thumbs {
-  clear: both;
   margin: 0;
   padding: 0; }
 #pics ul.thumbs li {
@@ -279,8 +289,6 @@ nav {
 #pics ul.thumbs img {
   border: none;
   display: block; }
-#pics div.pagination {
-  clear: both; }
 #pics div.navigation div.top {
   margin-bottom: 12px;
   height: 11px; }

@@ -18,59 +18,75 @@
         %li.pics pics
         %li.contact contact
 
+    #sidebar
+      // fb iframe
+      %p
+        <iframe src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fcoolingtowersmusic&amp;send=false&amp;layout=standard&amp;width=320&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=lucida+grande&amp;height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:320px; height:65px;" allowTransparency="true"></iframe>
+
+      %p#mailchump
+        <!-- Begin MailChimp Signup Form -->
+        <div id="mc_embed_signup">
+        <form action="http://coolingtowers.us5.list-manage1.com/subscribe/post?u=f122dd54a2bb389a7b9321753&amp;id=233dd1cdd3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+        <label for="mce-EMAIL">Subscribe to our mailing list!</label>
+        <input id="mailchimp-email" type="email" value="" placeholder="you@example.com" name="EMAIL" class="email" required>
+        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+        </form>
+        </div>
+
+      %p
+        "Candy Beach" at the Rumble
+        <iframe width="320" height="180" src="http://www.youtube-nocookie.com/embed/MjoXKLDH6Lk" frameborder="0" allowfullscreen></iframe>
+
+      %p
+        "Hard Headed Woman" at the Rumble
+        <iframe width="320" height="180" src="http://www.youtube-nocookie.com/embed/btw4D45mDqc" frameborder="0" allowfullscreen></iframe>
+
+      %p
+        "Kevlar Vest" at the Rumble
+        <iframe width="320" height="180" src="http://www.youtube-nocookie.com/embed/DJmwpTpfugw" frameborder="0" allowfullscreen></iframe>
+
+      %p
+        "Charlotte" at the Rumble
+        <iframe width="320" height="180" src="http://www.youtube-nocookie.com/embed/uER7Lf2nXjU" frameborder="0" allowfullscreen></iframe>
+
+      %p
+        "Apple Martin" at the Rumble
+        <iframe width="320" height="180" src="http://www.youtube-nocookie.com/embed/HrrpDXRoKBo" frameborder="0" allowfullscreen></iframe>
+
+      %p
+        "Charlotte" and "Lead Suitcase"
+        %br
+        at Great Scott, 26 Jan 2011
+        <iframe width="320" height="180" src="http://www.youtube-nocookie.com/embed/LRkIZlWbyQw" frameborder="0" allowfullscreen></iframe>
+
+      %p
+        "Chelsea Girls" at TT's, 19 Jan 2011
+        <iframe width="320" height="180" src="http://www.youtube-nocookie.com/embed/Stq_W-RCUrw" frameborder="0" allowfullscreen></iframe>
+
     #main
-      #news
-        #sidebar
-          // fb iframe
-          %p
-            <iframe src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fcoolingtowersmusic&amp;send=false&amp;layout=standard&amp;width=320&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=lucida+grande&amp;height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:320px; height:65px;" allowTransparency="true"></iframe>
-
-          %p#mailchump
-            <!-- Begin MailChimp Signup Form -->
-            <div id="mc_embed_signup">
-            <form action="http://coolingtowers.us5.list-manage1.com/subscribe/post?u=f122dd54a2bb389a7b9321753&amp;id=233dd1cdd3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-            <label for="mce-EMAIL">Subscribe to our mailing list!</label>
-            <input id="mailchimp-email" type="email" value="" placeholder="you@example.com" name="EMAIL" class="email" required>
-            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-            </form>
-            </div>
-
-          %p
-            "Candy Beach" at the Rumble
-            <iframe width="320" height="180" src="http://www.youtube-nocookie.com/embed/MjoXKLDH6Lk" frameborder="0" allowfullscreen></iframe>
-
-          %p
-            "Hard Headed Woman" at the Rumble
-            <iframe width="320" height="180" src="http://www.youtube-nocookie.com/embed/btw4D45mDqc" frameborder="0" allowfullscreen></iframe>
-
-          %p
-            "Kevlar Vest" at the Rumble
-            <iframe width="320" height="180" src="http://www.youtube-nocookie.com/embed/DJmwpTpfugw" frameborder="0" allowfullscreen></iframe>
-
-          %p
-            "Charlotte" at the Rumble
-            <iframe width="320" height="180" src="http://www.youtube-nocookie.com/embed/uER7Lf2nXjU" frameborder="0" allowfullscreen></iframe>
-
-          %p
-            "Apple Martin" at the Rumble
-            <iframe width="320" height="180" src="http://www.youtube-nocookie.com/embed/HrrpDXRoKBo" frameborder="0" allowfullscreen></iframe>
-
-          %p
-            "Charlotte" and "Lead Suitcase"
-            %br
-            at Great Scott, 26 Jan 2011
-            <iframe width="320" height="180" src="http://www.youtube-nocookie.com/embed/LRkIZlWbyQw" frameborder="0" allowfullscreen></iframe>
-
-          %p
-            "Chelsea Girls" at TT's, 19 Jan 2011
-            <iframe width="320" height="180" src="http://www.youtube-nocookie.com/embed/Stq_W-RCUrw" frameborder="0" allowfullscreen></iframe>
-
-
-        #content.hidden
+      #news.hidden
+        #tumblr
 
       #bio.hidden
         %a(href='images/press/201202-coolingtowers-2400x1350.jpg' target='_blank')
-          %img(src='images/press/201202-coolingtowers-400x225.jpg' align='left')
+          %img.bandpic(src='images/press/201202-coolingtowers-400x225.jpg' align='center' alt='Cooling Towers in Niner Bravo')
+        #lineup
+          .member
+            .name Commodore Vic
+            .role vocals
+          .member
+            .name Ronan Fahy
+            .role guitar
+          .member
+            .name Judy Margo
+            .role keyboard
+          .member
+            .name Eric Donohue
+            .role bass
+          .member
+            .name Pete Gamache
+            .role drums
+
         %p
           Formed in the spring of 2010 by guitarist Ronan Fahy and singer
           Commodore Vic, Cooling Towers has since garnered a healthy dose of
@@ -86,14 +102,16 @@
           of past regrets, their songs are decidedly romantic, and vital. Their
           sound is an amalgamation of indie rock, anthemic British pop and the
           angular aggression of 80's post punk.
-        %p
+        %p.hidden
           As word-of-mouth has spread,
           Cooling Towers have gone from local unknowns to well-received
           headliners within a matter of months. The band are currently finishing
           up a collection of tracks with producer Darron Burke of Make Shift
           Studio, set to be released this spring.
-
-        %img(src='images/ctlooksright-940x188.jpg')
+        %p
+          Cooling Towers recorded an album with producer Darron Burke of
+          Make Shift Studios, currently being mastered and set to be released
+          early 2013.
 
       #shows.hidden
         .show
@@ -162,7 +180,6 @@
 
       #audio.hidden
         #tracks <!-- populated by javascript -->
-        %img(src='images/ctlooksmostlyright-940x188.jpg')
 
       #pics.hidden
         <!-- include gallery.html -->
@@ -177,7 +194,7 @@
         %p
           %a(target='_blank' href='http://www.reverbnation.com/coolingtowers') reverbnation.com/coolingtowers
         %br
-        %img(src='images/press/201202-fiveheads-940x188.jpg' usemap="#fiveheadsmap")
+        //%img(src='images/press/201202-fiveheads-940x188.jpg' usemap="#fiveheadsmap")
         %map(name='fiveheadsmap')
           %area(shape="rect" coords='0,0,188,188' href='mailto:ronan@coolingtowers.us')
           %area(shape="rect" coords='188,0,376,188' href='mailto:judy@coolingtowers.us')
@@ -198,7 +215,7 @@
     :javascript
       (function(){
         var f=new FEEDEATER(),
-            c=$('#content');
+            c=$('#tumblr');
         c.hide();
         f.render({target: c});
         c.fadeIn(400);

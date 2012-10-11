@@ -2,7 +2,7 @@
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}/*HTML5display-roleresetforolderbrowsers*/article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}
 
 $width: 960px;
-$content-width: 550px;
+$content-width: 570px;
 // white theme
 $fgcolor: #000;
 $html_bgcolor: #f8f8f8;
@@ -13,8 +13,7 @@ $logo_color: #fff;
 $font: "Century Schoolbook", "Georgia", "Palatino", serif;
 
 
-// * { border: 1px solid red; }
-
+// * { border: 1px solid red !important; }
 .hidden { display: none; }
 
 html {
@@ -110,10 +109,22 @@ nav {
   }
 }
 
+#sidebar {
+  width: 320px;
+  float: right;
+  p {
+    margin-top: 15px;
+    &:first-child { margin-top: 0px; }
+  }
+  #mailchimp-email {
+    width: 230px;
+  }
+}
+
 #main {
+  width: $content-width;
   position: relative;
-  padding: 10px;
-  padding-bottom: 20px;
+  padding: 10px 0px 20px 0px;
   p { margin: 5px 0px; line-height: 1.4; }
   img[align=left]  { margin: 10px 10px 10px 0px; }
   img[align=right] { margin: 10px 0px 10px 10px; }
@@ -122,6 +133,25 @@ nav {
 
 #bio {
   p { margin: 5px 0px 25px 0px; }
+  img.bandpic {
+    display: block;
+    margin: 10px auto;
+  }
+  #lineup {
+    text-align: center;
+    margin-bottom: 30px;
+    .member {
+      display: block;
+      margin: 10px 0px;
+      .name {
+        display: inline;
+      }
+      .role {
+        display: inline;
+        font-style: italic;
+      }
+    }
+  }
 }
 
 #news {
@@ -139,22 +169,6 @@ nav {
     width: 100%;
     clear: both;
   }
-
-  #content {
-    width: $content-width;
-  }
-
-  #sidebar {
-    width: 320px;
-    float: right;
-    p {
-      margin-top: 15px;
-      &:first-child { margin-top: 0px; }
-    }
-    #mailchimp-email {
-      width: 230px;
-    }
-  }
 }
 
 #shows {
@@ -171,7 +185,6 @@ nav {
 #audio {
   h2 { margin-top: 0px; }
   .track {
-    clear: both;
     & > img {float: left; margin-right: 20px;}
     padding: 10px 0px;
   }
@@ -224,9 +237,9 @@ nav {
   }
   div.slideshow-container {
     position: relative;
-    clear: both;
+    //clear: both;
     height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
-    width: 960px;
+    width: $content-width; //960px;
     overflow-x: hidden;
     padding-bottom: 20px;
   }
@@ -251,9 +264,9 @@ nav {
   }
   div.slideshow a.advance-link {
     display: block;
-    width: 550px;
-    height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
-    line-height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
+    width: $content-width;
+    height: $content-width; /* This should be set to be at least the height of the largest image in the slideshow */
+    line-height: $content-width; /* This should be set to be at least the height of the largest image in the slideshow */
     text-align: center;
   }
   div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited {
@@ -293,7 +306,7 @@ nav {
     /* The navigation style is set using jQuery so that the javascript specific styles won't be applied unless javascript is enabled. */
   }
   ul.thumbs {
-    clear: both;
+    //clear: both;
     margin: 0;
     padding: 0;
   }
@@ -319,7 +332,7 @@ nav {
     display: block;
   }
   div.pagination {
-    clear: both;
+    //clear: both;
   }
   div.navigation div.top {
     margin-bottom: 12px;
